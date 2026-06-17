@@ -8,12 +8,13 @@ local localPlayerGui = player:WaitForChild("PlayerGui")
 local espEnabled = false
 local flyEnabled = false
 local aimEnabled = false
+local hitThroughWallsEnabled = false
 local aimTrackSpeed = 0.18
 
 local movement = Vector3.new()
 local verticalMovement = 0
 local flyVelocity, flyGyro
-local espButton, flyButton, aimButton
+local espButton, flyButton, aimButton, hitButton
 
 local function getClosestTarget()
     local camera = workspace.CurrentCamera
@@ -48,7 +49,7 @@ local function createCuteGui()
     screenGui.Parent = localPlayerGui
 
     local mainFrame = Instance.new("Frame")
-    mainFrame.Size = UDim2.new(0, 280, 0, 250)
+    mainFrame.Size = UDim2.new(0, 280, 0, 300)
     mainFrame.Position = UDim2.new(0, 20, 0, 80)
     mainFrame.BackgroundColor3 = Color3.fromRGB(20, 0, 80)
     mainFrame.BorderSizePixel = 0
@@ -155,7 +156,7 @@ local function createCuteGui()
             minimizeBtn.Text = "□"
         else
             contentFrame.Visible = true
-            mainFrame.Size = UDim2.new(0, 280, 0, 250)
+            mainFrame.Size = UDim2.new(0, 280, 0, 300)
             minimizeBtn.Text = "−"
         end
     end)
@@ -198,6 +199,7 @@ local function createCuteGui()
     espButton = makeToggle("ESP", 14)
     flyButton = makeToggle("Fly", 62)
     aimButton = makeToggle("Aimbot", 110)
+    hitButton = makeToggle("Hit Walls", 158)
 
     local function updateToggle(button, enabled)
         button.Text = enabled and "ON" or "OFF"
@@ -219,9 +221,14 @@ local function createCuteGui()
         updateToggle(aimButton, aimEnabled)
     end)
 
+    hitButton.MouseButton1Click:Connect(function()
+        hitThroughWallsEnabled = not hitThroughWallsEnabled
+        updateToggle(hitButton, hitThroughWallsEnabled)
+    end)
+
     local speedLabel = Instance.new("TextLabel")
     speedLabel.Size = UDim2.new(0.7, 0, 0, 26)
-    speedLabel.Position = UDim2.new(0, 18, 0, 159)
+    speedLabel.Position = UDim2.new(0, 18, 0, 200)
     speedLabel.BackgroundTransparency = 1
     speedLabel.Text = "Track Speed: " .. string.format("%.2f", aimTrackSpeed)
     speedLabel.Font = Enum.Font.Gotham
@@ -232,7 +239,7 @@ local function createCuteGui()
 
     local decrease = Instance.new("TextButton")
     decrease.Size = UDim2.new(0, 34, 0, 26)
-    decrease.Position = UDim2.new(0.72, 0, 0, 159)
+    decrease.Position = UDim2.new(0.72, 0, 0, 200)
     decrease.BackgroundColor3 = Color3.fromRGB(100, 20, 180)
     decrease.Text = "-"
     decrease.Font = Enum.Font.GothamBold
@@ -242,7 +249,7 @@ local function createCuteGui()
 
     local increase = Instance.new("TextButton")
     increase.Size = UDim2.new(0, 34, 0, 26)
-    increase.Position = UDim2.new(0.86, 0, 0, 159)
+    increase.Position = UDim2.new(0.86, 0, 0, 200)
     increase.BackgroundColor3 = Color3.fromRGB(100, 20, 180)
     increase.Text = "+"
     increase.Font = Enum.Font.GothamBold
@@ -276,7 +283,7 @@ local function createCuteGui()
 
     local creditLabel = Instance.new("TextLabel")
     creditLabel.Size = UDim2.new(1, -4, 0, 22)
-    creditLabel.Position = UDim2.new(0, 2, 0, 190)
+    creditLabel.Position = UDim2.new(0, 2, 0, 228)
     creditLabel.BackgroundTransparency = 0.1
     creditLabel.BackgroundColor3 = Color3.fromRGB(0, 255, 200)
     creditLabel.Text = "by Phuong Quan"
@@ -411,6 +418,18 @@ local function updateAimbot()
     camera.CFrame = camera.CFrame:Lerp(desired, aimTrackSpeed)
 end
 
+local function updateHitThroughWalls()
+    if not hitThroughWallsEnabled then return end
+    local character = player.Character
+    if not character then return end
+    
+    for _, part in ipairs(character:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = false
+        end
+    end
+end
+
 local function enableFly()
     local character = player.Character
     if not character then return end
@@ -498,6 +517,12 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
             aimButton.Text = aimEnabled and "ON" or "OFF"
             aimButton.BackgroundColor3 = aimEnabled and Color3.fromRGB(0, 220, 200) or Color3.fromRGB(70, 10, 140)
         end
+    elseif input.KeyCode == Enum.KeyCode.Z then
+        hitThroughWallsEnabled = not hitThroughWallsEnabled
+        if hitButton then
+            hitButton.Text = hitThroughWallsEnabled and "ON" or "OFF"
+            hitButton.BackgroundColor3 = hitThroughWallsEnabled and Color3.fromRGB(0, 220, 200) or Color3.fromRGB(70, 10, 140)
+        end
     end
 end)
 
@@ -528,6 +553,9 @@ player.CharacterAdded:Connect(function()
     if flyEnabled then
         enableFly()
     end
+    if hitThroughWallsEnabled then
+        updateHitThroughWalls()
+    end
     if espEnabled then
         for _, otherPlayer in ipairs(Players:GetPlayers()) do
             if otherPlayer ~= player then
@@ -557,6 +585,10 @@ RunService.RenderStepped:Connect(function()
 
     if aimEnabled then
         updateAimbot()
+    end
+
+    if hitThroughWallsEnabled then
+        updateHitThroughWalls()
     end
 end)
 
