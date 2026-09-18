@@ -1,1 +1,595 @@
-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
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+
+local player = Players.LocalPlayer
+local localPlayerGui = player:WaitForChild("PlayerGui")
+
+local espEnabled = false
+local flyEnabled = false
+local aimEnabled = false
+local hitThroughWallsEnabled = false
+local aimTrackSpeed = 0.18
+
+local movement = Vector3.new()
+local verticalMovement = 0
+local flyVelocity, flyGyro
+local espButton, flyButton, aimButton, hitButton
+
+local function getClosestTarget()
+    local camera = workspace.CurrentCamera
+    local bestTarget, bestDistance = nil, math.huge
+
+    for _, otherPlayer in ipairs(Players:GetPlayers()) do
+        if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            local humanoid = otherPlayer.Character:FindFirstChildOfClass("Humanoid")
+            if humanoid and humanoid.Health > 0 then
+                local root = otherPlayer.Character.HumanoidRootPart
+                local screenPos, onScreen = camera:WorldToViewportPoint(root.Position)
+                if onScreen then
+                    local center = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
+                    local pos2d = Vector2.new(screenPos.X, screenPos.Y)
+                    local dist = (pos2d - center).Magnitude
+                    if dist < bestDistance and dist < 200 then
+                        bestDistance = dist
+                        bestTarget = root
+                    end
+                end
+            end
+        end
+    end
+
+    return bestTarget
+end
+
+local function createCuteGui()
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "CuteFlyEspAimbotGui"
+    screenGui.ResetOnSpawn = false
+    screenGui.Parent = localPlayerGui
+
+    local mainFrame = Instance.new("Frame")
+    mainFrame.Size = UDim2.new(0, 280, 0, 300)
+    mainFrame.Position = UDim2.new(0, 20, 0, 80)
+    mainFrame.BackgroundColor3 = Color3.fromRGB(20, 0, 80)
+    mainFrame.BorderSizePixel = 0
+    mainFrame.AnchorPoint = Vector2.new(0, 0)
+    mainFrame.Parent = screenGui
+
+    local mainRound = Instance.new("UICorner")
+    mainRound.CornerRadius = UDim.new(0, 24)
+    mainRound.Parent = mainFrame
+
+    local mainStroke = Instance.new("UIStroke")
+    mainStroke.Color = Color3.fromRGB(110, 255, 230)
+    mainStroke.Thickness = 2
+    mainStroke.Transparency = 0
+    mainStroke.Parent = mainFrame
+
+    local mainGradient = Instance.new("UIGradient")
+    mainGradient.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(40, 0, 120)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 30, 220))
+    }
+    mainGradient.Rotation = 90
+    mainGradient.Parent = mainFrame
+
+    local titleBar = Instance.new("TextButton")
+    titleBar.Size = UDim2.new(1, 0, 0, 36)
+    titleBar.Position = UDim2.new(0, 0, 0, 0)
+    titleBar.BackgroundTransparency = 1
+    titleBar.AutoButtonColor = false
+    titleBar.Text = ""
+    titleBar.Parent = mainFrame
+
+    local dragging = false
+    local dragStart = Vector2.new()
+    local frameStartPos = UDim2.new()
+
+    titleBar.InputBegan:Connect(function(input, gameProcessed)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = player:GetMouse().Position
+            frameStartPos = mainFrame.Position
+        end
+    end)
+
+    titleBar.InputEnded:Connect(function(input, gameProcessed)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = false
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local mousePos = player:GetMouse().Position
+            local delta = mousePos - dragStart
+            mainFrame.Position = UDim2.new(frameStartPos.X.Scale, frameStartPos.X.Offset + delta.X, frameStartPos.Y.Scale, frameStartPos.Y.Offset + delta.Y)
+        end
+    end)
+
+    local title = Instance.new("TextLabel")
+    title.Size = UDim2.new(0.85, 0, 0, 36)
+    title.Position = UDim2.new(0, 8, 0, 0)
+    title.BackgroundTransparency = 1
+    title.Text = "ESP + Fly + Aim"
+    title.Font = Enum.Font.GothamBold
+    title.TextSize = 22
+    title.TextColor3 = Color3.fromRGB(175, 255, 245)
+    title.TextStrokeTransparency = 0.5
+    title.Parent = titleBar
+
+    local contentFrame = Instance.new("Frame")
+    contentFrame.Size = UDim2.new(1, 0, 1, -36)
+    contentFrame.Position = UDim2.new(0, 0, 0, 36)
+    contentFrame.BackgroundTransparency = 1
+    contentFrame.Parent = mainFrame
+
+    local minimizeBtn = Instance.new("TextButton")
+    minimizeBtn.Name = "MinimizeBtn"
+    minimizeBtn.Size = UDim2.new(0, 32, 0, 32)
+    minimizeBtn.Position = UDim2.new(0.92, 0, 0, 2)
+    minimizeBtn.BackgroundColor3 = Color3.fromRGB(70, 10, 140)
+    minimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    minimizeBtn.Font = Enum.Font.GothamBold
+    minimizeBtn.TextSize = 18
+    minimizeBtn.Text = "−"
+    minimizeBtn.AutoButtonColor = false
+    minimizeBtn.Parent = titleBar
+
+    local minimizeBtnRound = Instance.new("UICorner")
+    minimizeBtnRound.CornerRadius = UDim.new(0, 8)
+    minimizeBtnRound.Parent = minimizeBtn
+
+    local minimizeBtnStroke = Instance.new("UIStroke")
+    minimizeBtnStroke.Color = Color3.fromRGB(145, 255, 220)
+    minimizeBtnStroke.Thickness = 1.5
+    minimizeBtnStroke.Parent = minimizeBtn
+
+    local isMinimized = false
+
+    minimizeBtn.MouseButton1Click:Connect(function()
+        isMinimized = not isMinimized
+        if isMinimized then
+            contentFrame.Visible = false
+            mainFrame.Size = UDim2.new(0, 280, 0, 36)
+            minimizeBtn.Text = "□"
+        else
+            contentFrame.Visible = true
+            mainFrame.Size = UDim2.new(0, 280, 0, 300)
+            minimizeBtn.Text = "−"
+        end
+    end)
+
+    local function makeToggle(text, y)
+        local label = Instance.new("TextLabel")
+        label.Size = UDim2.new(0.58, 0, 0, 30)
+        label.Position = UDim2.new(0, 12, 0, y)
+        label.BackgroundTransparency = 1
+        label.Text = text
+        label.Font = Enum.Font.Gotham
+        label.TextSize = 18
+        label.TextColor3 = Color3.fromRGB(190, 240, 255)
+        label.TextXAlignment = Enum.TextXAlignment.Left
+        label.Parent = contentFrame
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0.32, 0, 0, 30)
+        button.Position = UDim2.new(0.62, 0, 0, y)
+        button.BackgroundColor3 = Color3.fromRGB(70, 10, 140)
+        button.TextColor3 = Color3.fromRGB(255, 255, 255)
+        button.Font = Enum.Font.GothamBold
+        button.TextSize = 16
+        button.Text = "OFF"
+        button.AutoButtonColor = false
+        button.Parent = contentFrame
+
+        local btnRound = Instance.new("UICorner")
+        btnRound.CornerRadius = UDim.new(0, 14)
+        btnRound.Parent = button
+
+        local btnStroke = Instance.new("UIStroke")
+        btnStroke.Color = Color3.fromRGB(145, 255, 220)
+        btnStroke.Thickness = 1.5
+        btnStroke.Parent = button
+
+        return button
+    end
+
+    espButton = makeToggle("ESP", 14)
+    flyButton = makeToggle("Fly", 62)
+    aimButton = makeToggle("Aimbot", 110)
+    hitButton = makeToggle("Hit Walls", 158)
+
+    local function updateToggle(button, enabled)
+        button.Text = enabled and "ON" or "OFF"
+        button.BackgroundColor3 = enabled and Color3.fromRGB(0, 220, 200) or Color3.fromRGB(70, 10, 140)
+    end
+
+    espButton.MouseButton1Click:Connect(function()
+        espEnabled = not espEnabled
+        updateToggle(espButton, espEnabled)
+    end)
+
+    flyButton.MouseButton1Click:Connect(function()
+        flyEnabled = not flyEnabled
+        updateToggle(flyButton, flyEnabled)
+    end)
+
+    aimButton.MouseButton1Click:Connect(function()
+        aimEnabled = not aimEnabled
+        updateToggle(aimButton, aimEnabled)
+    end)
+
+    hitButton.MouseButton1Click:Connect(function()
+        hitThroughWallsEnabled = not hitThroughWallsEnabled
+        updateToggle(hitButton, hitThroughWallsEnabled)
+    end)
+
+    local speedLabel = Instance.new("TextLabel")
+    speedLabel.Size = UDim2.new(0.7, 0, 0, 26)
+    speedLabel.Position = UDim2.new(0, 18, 0, 200)
+    speedLabel.BackgroundTransparency = 1
+    speedLabel.Text = "Track Speed: " .. string.format("%.2f", aimTrackSpeed)
+    speedLabel.Font = Enum.Font.Gotham
+    speedLabel.TextSize = 16
+    speedLabel.TextColor3 = Color3.fromRGB(170, 245, 255)
+    speedLabel.TextXAlignment = Enum.TextXAlignment.Left
+    speedLabel.Parent = contentFrame
+
+    local decrease = Instance.new("TextButton")
+    decrease.Size = UDim2.new(0, 34, 0, 26)
+    decrease.Position = UDim2.new(0.72, 0, 0, 200)
+    decrease.BackgroundColor3 = Color3.fromRGB(100, 20, 180)
+    decrease.Text = "-"
+    decrease.Font = Enum.Font.GothamBold
+    decrease.TextSize = 20
+    decrease.TextColor3 = Color3.fromRGB(255, 255, 255)
+    decrease.Parent = contentFrame
+
+    local increase = Instance.new("TextButton")
+    increase.Size = UDim2.new(0, 34, 0, 26)
+    increase.Position = UDim2.new(0.86, 0, 0, 200)
+    increase.BackgroundColor3 = Color3.fromRGB(100, 20, 180)
+    increase.Text = "+"
+    increase.Font = Enum.Font.GothamBold
+    increase.TextSize = 20
+    increase.TextColor3 = Color3.fromRGB(255, 255, 255)
+    increase.Parent = contentFrame
+
+    local decreaseStroke = Instance.new("UIStroke")
+    decreaseStroke.Color = Color3.fromRGB(145, 255, 220)
+    decreaseStroke.Thickness = 1.5
+    decreaseStroke.Parent = decrease
+
+    local increaseStroke = Instance.new("UIStroke")
+    increaseStroke.Color = Color3.fromRGB(145, 255, 220)
+    increaseStroke.Thickness = 1.5
+    increaseStroke.Parent = increase
+
+    local function updateSpeedLabel()
+        speedLabel.Text = "Track Speed: " .. string.format("%.2f", aimTrackSpeed)
+    end
+
+    decrease.MouseButton1Click:Connect(function()
+        aimTrackSpeed = math.clamp(aimTrackSpeed - 0.02, 0.02, 0.5)
+        updateSpeedLabel()
+    end)
+
+    increase.MouseButton1Click:Connect(function()
+        aimTrackSpeed = math.clamp(aimTrackSpeed + 0.02, 0.02, 0.5)
+        updateSpeedLabel()
+    end)
+
+    local creditLabel = Instance.new("TextLabel")
+    creditLabel.Size = UDim2.new(1, -4, 0, 22)
+    creditLabel.Position = UDim2.new(0, 2, 0, 228)
+    creditLabel.BackgroundTransparency = 0.1
+    creditLabel.BackgroundColor3 = Color3.fromRGB(0, 255, 200)
+    creditLabel.Text = "by Phuong Quan"
+    creditLabel.Font = Enum.Font.GothamBold
+    creditLabel.TextSize = 14
+    creditLabel.TextColor3 = Color3.fromRGB(0, 50, 50)
+    creditLabel.Parent = contentFrame
+
+    local creditCorner = Instance.new("UICorner")
+    creditCorner.CornerRadius = UDim.new(0, 8)
+    creditCorner.Parent = creditLabel
+end
+
+local function createEspGui(character)
+    local root = character:FindFirstChild("HumanoidRootPart")
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not root or not humanoid then return end
+
+    local existing = root:FindFirstChild("CuteESP")
+    if existing then return end
+
+    local billboard = Instance.new("BillboardGui")
+    billboard.Name = "CuteESP"
+    billboard.Adornee = root
+    billboard.Size = UDim2.new(0, 140, 0, 48)
+    billboard.AlwaysOnTop = true
+    billboard.StudsOffset = Vector3.new(0, 2.8, 0)
+    billboard.Parent = root
+
+    local container = Instance.new("Frame")
+    container.Size = UDim2.new(1, 0, 1, 0)
+    container.BackgroundTransparency = 0.4
+    container.BackgroundColor3 = Color3.fromRGB(55, 8, 82)
+    container.BorderSizePixel = 0
+    container.Parent = billboard
+
+    local rounded = Instance.new("UICorner")
+    rounded.CornerRadius = UDim.new(0, 14)
+    rounded.Parent = container
+
+    local nameLabel = Instance.new("TextLabel")
+    nameLabel.Name = "NameLabel"
+    nameLabel.Size = UDim2.new(1, -8, 0, 20)
+    nameLabel.Position = UDim2.new(0, 4, 0, 4)
+    nameLabel.BackgroundTransparency = 1
+    nameLabel.Text = character.Name
+    nameLabel.Font = Enum.Font.GothamBold
+    nameLabel.TextSize = 14
+    nameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    nameLabel.TextStrokeTransparency = 0.5
+    nameLabel.Parent = container
+
+    local hpBar = Instance.new("Frame")
+    hpBar.Name = "HpBar"
+    hpBar.Size = UDim2.new(0.92, 0, 0, 10)
+    hpBar.Position = UDim2.new(0.04, 0, 0, 28)
+    hpBar.BackgroundColor3 = Color3.fromRGB(170, 170, 170)
+    hpBar.BorderSizePixel = 0
+    hpBar.Parent = container
+
+    local hpFill = Instance.new("Frame")
+    hpFill.Name = "HpFill"
+    hpFill.Size = UDim2.new(1, 0, 1, 0)
+    hpFill.BackgroundColor3 = Color3.fromRGB(255, 102, 102)
+    hpFill.BorderSizePixel = 0
+    hpFill.Parent = hpBar
+
+    local hpText = Instance.new("TextLabel")
+    hpText.Name = "HpText"
+    hpText.Size = UDim2.new(1, 0, 0, 18)
+    hpText.Position = UDim2.new(0, 0, 0, 18)
+    hpText.BackgroundTransparency = 1
+    hpText.Text = string.format("%d / %d", humanoid.Health, humanoid.MaxHealth)
+    hpText.Font = Enum.Font.Gotham
+    hpText.TextSize = 13
+    hpText.TextColor3 = Color3.fromRGB(255, 255, 255)
+    hpText.TextStrokeTransparency = 0.7
+    hpText.Parent = container
+end
+
+local function updateEspForPlayer(otherPlayer)
+    if not otherPlayer.Character then return end
+    local humanoid = otherPlayer.Character:FindFirstChildOfClass("Humanoid")
+    local root = otherPlayer.Character:FindFirstChild("HumanoidRootPart")
+    if not humanoid or not root then return end
+
+    if espEnabled then
+        createEspGui(otherPlayer.Character)
+        local billboard = root:FindFirstChild("CuteESP")
+        if billboard then
+            local hpBar = billboard.Frame:FindFirstChild("HpBar")
+            local hpFill = hpBar and hpBar:FindFirstChild("HpFill")
+            local hpText = billboard.Frame:FindFirstChild("HpText")
+            if hpFill then
+                local ratio = math.clamp(humanoid.Health / humanoid.MaxHealth, 0, 1)
+                hpFill.Size = UDim2.new(ratio, 0, 1, 0)
+                hpFill.BackgroundColor3 = Color3.fromRGB(255 - ratio * 120, ratio * 180 + 75, 90)
+            end
+            if hpText then
+                hpText.Text = string.format("%d / %d", math.max(0, math.floor(humanoid.Health)), math.max(1, math.floor(humanoid.MaxHealth)))
+            end
+        end
+    else
+        if root:FindFirstChild("CuteESP") then
+            root.CuteESP:Destroy()
+        end
+    end
+end
+
+local function removeEspForPlayer(otherPlayer)
+    if otherPlayer.Character then
+        local root = otherPlayer.Character:FindFirstChild("HumanoidRootPart")
+        if root and root:FindFirstChild("CuteESP") then
+            root.CuteESP:Destroy()
+        end
+    end
+end
+
+local function updateAimbot()
+    if not aimEnabled then
+        return
+    end
+    local camera = workspace.CurrentCamera
+    local targetRoot = getClosestTarget()
+    if not targetRoot then
+        return
+    end
+
+    local targetPos = targetRoot.Position
+    local currentPos = camera.CFrame.Position
+    local desired = CFrame.new(currentPos, targetPos)
+    camera.CFrame = camera.CFrame:Lerp(desired, aimTrackSpeed)
+end
+
+local function updateHitThroughWalls()
+    if not hitThroughWallsEnabled then return end
+    local character = player.Character
+    if not character then return end
+    
+    for _, part in ipairs(character:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.CanCollide = false
+        end
+    end
+end
+
+local function enableFly()
+    local character = player.Character
+    if not character then return end
+    local root = character:FindFirstChild("HumanoidRootPart")
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if not root or not humanoid then return end
+
+    humanoid.PlatformStand = true
+
+    flyVelocity = Instance.new("BodyVelocity")
+    flyVelocity.MaxForce = Vector3.new(9e9, 9e9, 9e9)
+    flyVelocity.Velocity = Vector3.new(0, 0, 0)
+    flyVelocity.Parent = root
+
+    flyGyro = Instance.new("BodyGyro")
+    flyGyro.MaxTorque = Vector3.new(9e9, 9e9, 9e9)
+    flyGyro.P = 5000
+    flyGyro.CFrame = root.CFrame
+    flyGyro.Parent = root
+end
+
+local function disableFly()
+    if flyVelocity then
+        flyVelocity:Destroy()
+        flyVelocity = nil
+    end
+    if flyGyro then
+        flyGyro:Destroy()
+        flyGyro = nil
+    end
+    local humanoid = player.Character and player.Character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.PlatformStand = false
+    end
+end
+
+local function updateFly()
+    if not flyEnabled or not flyVelocity or not flyGyro then
+        return
+    end
+
+    local root = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+    if not root then
+        return
+    end
+
+    local camera = workspace.CurrentCamera
+    local direction = Vector3.new(movement.X, 0, movement.Y)
+    local forward = camera.CFrame.LookVector
+    local right = camera.CFrame.RightVector
+
+    local horizontalMove = Vector3.new(0, 0, 0)
+    if direction.Magnitude > 0 then
+        horizontalMove = (forward * direction.Z + right * direction.X).Unit * 80
+    end
+    
+    flyVelocity.Velocity = Vector3.new(horizontalMove.X, verticalMovement * 80, horizontalMove.Z)
+
+    flyGyro.CFrame = CFrame.new(root.Position, root.Position + camera.CFrame.LookVector)
+end
+
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    if input.KeyCode == Enum.KeyCode.W then
+        movement = Vector3.new(movement.X, 1, 0)
+    elseif input.KeyCode == Enum.KeyCode.S then
+        movement = Vector3.new(movement.X, -1, 0)
+    elseif input.KeyCode == Enum.KeyCode.A then
+        movement = Vector3.new(-1, movement.Y, 0)
+    elseif input.KeyCode == Enum.KeyCode.D then
+        movement = Vector3.new(1, movement.Y, 0)
+    elseif input.KeyCode == Enum.KeyCode.Space then
+        verticalMovement = 1
+    elseif input.KeyCode == Enum.KeyCode.LeftControl then
+        verticalMovement = -1
+    elseif input.KeyCode == Enum.KeyCode.E then
+        flyEnabled = not flyEnabled
+        if flyButton then
+            flyButton.Text = flyEnabled and "ON" or "OFF"
+            flyButton.BackgroundColor3 = flyEnabled and Color3.fromRGB(0, 220, 200) or Color3.fromRGB(70, 10, 140)
+        end
+    elseif input.KeyCode == Enum.KeyCode.Q then
+        aimEnabled = not aimEnabled
+        if aimButton then
+            aimButton.Text = aimEnabled and "ON" or "OFF"
+            aimButton.BackgroundColor3 = aimEnabled and Color3.fromRGB(0, 220, 200) or Color3.fromRGB(70, 10, 140)
+        end
+    elseif input.KeyCode == Enum.KeyCode.Z then
+        hitThroughWallsEnabled = not hitThroughWallsEnabled
+        if hitButton then
+            hitButton.Text = hitThroughWallsEnabled and "ON" or "OFF"
+            hitButton.BackgroundColor3 = hitThroughWallsEnabled and Color3.fromRGB(0, 220, 200) or Color3.fromRGB(70, 10, 140)
+        end
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    if input.KeyCode == Enum.KeyCode.W or input.KeyCode == Enum.KeyCode.S then
+        movement = Vector3.new(movement.X, 0, 0)
+    elseif input.KeyCode == Enum.KeyCode.A or input.KeyCode == Enum.KeyCode.D then
+        movement = Vector3.new(0, movement.Y, 0)
+    elseif input.KeyCode == Enum.KeyCode.Space or input.KeyCode == Enum.KeyCode.LeftControl then
+        verticalMovement = 0
+    end
+end)
+
+Players.PlayerAdded:Connect(function(otherPlayer)
+    otherPlayer.CharacterAdded:Connect(function()
+        if espEnabled then
+            task.wait(0.5)
+            updateEspForPlayer(otherPlayer)
+        end
+    end)
+end)
+
+Players.PlayerRemoving:Connect(removeEspForPlayer)
+
+player.CharacterAdded:Connect(function()
+    task.wait(0.5)
+    if flyEnabled then
+        enableFly()
+    end
+    if hitThroughWallsEnabled then
+        updateHitThroughWalls()
+    end
+    if espEnabled then
+        for _, otherPlayer in ipairs(Players:GetPlayers()) do
+            if otherPlayer ~= player then
+                updateEspForPlayer(otherPlayer)
+            end
+        end
+    end
+end)
+
+RunService.RenderStepped:Connect(function()
+    for _, otherPlayer in ipairs(Players:GetPlayers()) do
+        if otherPlayer ~= player then
+            updateEspForPlayer(otherPlayer)
+        end
+    end
+
+    if flyEnabled then
+        if not flyVelocity or not flyGyro then
+            enableFly()
+        end
+        updateFly()
+    else
+        if flyVelocity or flyGyro then
+            disableFly()
+        end
+    end
+
+    if aimEnabled then
+        updateAimbot()
+    end
+
+    if hitThroughWallsEnabled then
+        updateHitThroughWalls()
+    end
+end)
+
+createCuteGui()
